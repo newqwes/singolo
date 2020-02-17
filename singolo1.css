@@ -1,52 +1,229 @@
-@font-face{
-    font-family: 'Lato';
-    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+@font-face {
+    font-family: 'Lato Black';
+    src: url('assets/fonts/Lato-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     }
-@font-face{
-    font-family: 'Lato';
-    src: url('/assets/fonts/Lato-Bold.ttf') format('truetype');
-    font-weight: bold;
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
     }
+    
 html {
     font-size: 10px;
 }
+
 body {
+    margin: 0;
+    font-family: 'Lato Regular', Verdana, sans-serif;
     font-size: 1.6rem;
-    font-family: 'Lato', Verdana, sans-serif;
+    background-color: #fefefe;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
+    width: 100%;
     max-width: 1020px;
     margin: 0 auto;
+    padding: 0 40px;
 }
+
+.header {
+    padding: 34px 0 30px;
+    background-color: #2d303a;
+    border-bottom: solid 6px #323746;
+}
+
 .header__wrapper {
-    padding: 20px;
-    background-color:#2d303a;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
-.header {
-    text-transform: uppercase;
+
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.55px;
     color: #fff;
-    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
 }
+
 .logo span {
     color: #f06c64;
 }
-.navigation {
-    margin: 0;
-    padding: 4px;
+
+.nav__list {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    list-style: none;
+    text-transform: uppercase;
 }
-.navigation li {
-    display: inline;
+
+.nav__list__item {
+    margin-right: 29px;
+    cursor: pointer;
+    position: relative;
 }
-.navigation__link {
-    text-decoration: none;
-    color: #ffffff;
+
+.nav__list__item::after {
+    content: "";
+    background-color: #434759;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+
 }
-.navigation__link_colored {
+
+.nav__list__item:hover {
     color: #f06c64;
+}
+
+.nav__list__item:last-child {
+    margin-right: 0;
+}
+
+.nav__list__item:last-child::after {
+    width: 0;
+}
+
+.nav__list__item-active {
+    color: #f06c64;
+}
+
+.flip {
+    height: 600px;
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
+}
+
+.flip__inner {
+    position: relative;
+}
+
+.flip__item {
+    display: flex;
+}
+
+.iphone_ver {
+    padding: 53px 0 0 72px;
+}
+
+.iphone_hor {
+    padding: 174px 0 0 73px;
+
+}
+
+.left {
+    position: absolute;
+    top: 52%;
+    left: 2px;
+    cursor: pointer;
+}
+
+.right {
+    position: absolute;
+    top: 52%;
+    right: 0;
+    cursor: pointer;
+}
+
+.services {
+    padding: 63px 0 31px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #fff
+}
+
+.services__title {
+    margin-bottom: 16px;
+    font-family: 'Lato Black', Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #666d89;
+    word-spacing: -1.5px;
+}
+
+.services__subtitle {
+    margin-bottom: 43px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #767e9e;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: -.35px;
+}
+
+.layout-3-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.benefit-content {
+    margin-bottom: 30px;
+    width: 33%;
+    max-width: 299px;
+    max-height: 93px;
+    padding-left: 79px;
+    overflow: hidden;
+    position: relative;
+}
+
+.benefit-content__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 59px;
+    padding: 15px;
+    border: 2px solid #666d89;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.benefit-content__item__title {
+    margin-bottom: 9px;
+    font-family: "Lato Black", Verdana, sans-serif;
+    color: #666d89;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.benefit-content__item__text {
+    color: #767e9e;
+    font-size: 1.2rem;
+    line-height: 21px;
+    text-align: justify;
+}
+
+.benefit-content__item__title-ls {
+    letter-spacing: -.35px;
 }
