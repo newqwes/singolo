@@ -11,7 +11,7 @@
     font-weight: normal;
     font-style: normal;
     }
-    
+  
 html {
     font-size: 10px;
 }
@@ -23,9 +23,7 @@ body {
     background-color: #fefefe;
 }
 
-*,
-*:before,
-*:after {
+* {
     box-sizing: border-box;
 }
 
@@ -40,6 +38,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0 auto;
     padding: 0 40px;
 }
+
+/* header */
 
 .header {
     padding: 34px 0 30px;
@@ -78,14 +78,12 @@ h1, h2, h3, h4, h5, h6, p, ul {
     display: flex;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #fff;
     list-style: none;
     text-transform: uppercase;
 }
 
 .nav__list__item {
     margin-right: 29px;
-    cursor: pointer;
     position: relative;
 }
 
@@ -101,9 +99,18 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 }
 
-.nav__list__item:hover {
-    color: #f06c64;
+a {
+    text-decoration: none;
+    color: #fff;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
 }
+
+  a:hover,
+  a:focus {
+    color: #f06c64;
+  }
 
 .nav__list__item:last-child {
     margin-right: 0;
@@ -113,9 +120,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
     width: 0;
 }
 
-.nav__list__item-active {
+.list__item_active {
     color: #f06c64;
 }
+
+/* flip */
 
 .flip {
     height: 600px;
@@ -147,12 +156,37 @@ h1, h2, h3, h4, h5, h6, p, ul {
     cursor: pointer;
 }
 
+.left a {
+    display: inline-block;
+    background-image: url(./assets/images/left.png);
+    width: 16px;
+    height: 27px;
+    
+}
+.left a:focus {
+    background-image: url(./assets/images/leftc.png);
+}
+
+.right a:focus {
+    background-image: url(./assets/images/rightc.png);
+}
+
+.right a {
+    display: inline-block;
+    background-image: url(./assets/images/right.png);
+    width: 16px;
+    height: 27px;
+    
+}
+
 .right {
     position: absolute;
     top: 52%;
     right: 0;
     cursor: pointer;
 }
+
+/* services */
 
 .services {
     padding: 63px 0 31px;
